@@ -2,7 +2,3 @@ node_modules/
 temp/
 .idea/
 *.log
-
-output/
-build/
-
