@@ -1,0 +1,52 @@
+@import "lesshat";
+
+html {
+  background: #F2F0F1;
+}
+body {
+  color: #505862;
+  font-family: 'Droid Sans', sans-serif;
+  > img {
+    border: 1px solid #000;
+  }
+}
+a, a:visited {
+  cursor: pointer;
+  color: #455466;
+  text-decoration: none;
+  &:active, &:hover {
+    color: #77C7DC;
+  }
+}
+.container {
+  background-color: #F5E5B0;
+}
+
+header, .content, footer {
+  margin: 0px auto 20px;
+  padding: 0 20px;
+}
+
+/* header */
+header {
+  border-bottom: 2px dotted #F3615F;
+  font-weight: bold;
+  h1 {
+    display: inline-block;
+    color: #F3615F;
+    padding-right:12px;
+  }
+}
+
+
+/* footer */
+footer {
+  font-size: 80%;
+  border-top: 2px dotted #F3615F;
+  margin-top: 2em;
+  overflow: hidden;
+  .contact {
+    padding-top: 1em;
+    float: left;
+  }
+}
