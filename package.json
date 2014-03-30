@@ -1,15 +1,15 @@
 {
-    "name": "my-angluar-test",
-    "version": "0.0.0",
-    "description": "description",
+    "name": "angular-bootstrap-template",
+    "version": "0.1.0",
+    "description": "A generic template for self-development.",
     "main": "Gruntfile.js",
-    "keywords": [ "stuff", "node", "grunt", "test" ],
+    "keywords": [ "node.js", "grunt", "jasmine", "jsdoc", "less", "angular.js", "bootstrap" ],
     "author": "Francesco Zaia",
     "license": "MIT",
     "private": true,
     "repository": {
         "type"                    : "git",
-        "url"                     : ""
+        "url"                     : "https://github.com/francescozaia/angular-bootstrap-template"
     },
     "devDependencies" : {
         "bower"                 : "1.3.x",
