@@ -13,7 +13,7 @@ module.exports = function (grunt) {
         clean: {
             test    : [".grunt", "_SpecRunner.html", "<%= _outputPath %>/test-reports"],
             docs    : ["<%= _outputPath %>/docs"],
-            build   : ["<%= _buildPath %>/*.*"]
+            build   : ["<%= _buildPath %>"]
         },
 
         connect: {
@@ -54,8 +54,8 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand  : true,
-                        cwd     : "<%= _developmentPath %>",
-                        src     : "js/app/**/*.js",
+                        cwd     : "<%= _developmentPath %>/js/app/",
+                        src     : "**/*.js",
                         dest    : "<%= _developmentPath %>/js/app.min/",
                         ext     : ".js"
                     }
@@ -64,21 +64,18 @@ module.exports = function (grunt) {
         },
 
         copy: {
-            all: {
-                files: [
-                    {
-                        expand  : true,
-                        cwd     : "<%= _developmentPath %>",
-                        src     : ["**", "!js/app/*.*", "!less/*.*"],
-                        dest    : "<%= _buildPath %>",
-                        filter  : "isFile",
-                        options: {
-                            process: function (content, srcpath) {
-                                return content.replace("js/app", "js/app.min"); // doesn't work yet
-                            }
-                        }
+            main: {
+                expand  : true,
+                cwd     : "<%= _developmentPath %>",
+                src     : ["**", "!less/*.*"],
+                dest    : "<%= _buildPath %>",
+                filter  : "isFile"
+                /*options : {
+                    process : function (content, srcpath) {
+                        return content.replace(/js\/app\//gi, "js/app.min/"); // TODO doesn't work yet
                     }
-                ]
+                }*/
+
             }
         },
 
@@ -158,7 +155,7 @@ module.exports = function (grunt) {
     // Default task(s).
     grunt.registerTask("test", "JS testing task.", ["jshint", "clean:test", "jasmine"]);
     grunt.registerTask("docs", "Generate JSDoc.", ["clean:jsdoc", "jsdoc"]);
-    grunt.registerTask("deploy-dev", ["clean", "build", "copy", "uglify"]);
+    grunt.registerTask("deploy", ["clean:build", "uglify", "copy"]);
     grunt.registerTask("server", ["connect", "watch"]);
 
 };
