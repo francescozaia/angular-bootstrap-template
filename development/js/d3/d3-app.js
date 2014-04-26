@@ -33,10 +33,10 @@ angular.module('d3AngularApp', ['d3'])
 
                         // hard-code data
                         scope.data = [
-                            {name: "Greg", score: 98},
-                            {name: "Ari", score: 96},
+                            {name: 'Giulia', score: 100},
+                            {name: 'Francesco', score: 96},
                             {name: 'Q', score: 75},
-                            {name: "Loser", score: 48}
+                            {name: 'Loser', score: 48}
                         ];
 
                         scope.$watch(function () {
