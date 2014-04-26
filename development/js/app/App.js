@@ -1,8 +1,7 @@
-/* global window, app */
+/* global window, app, angular */
+"use strict";
 
 (function (_app) {
-
-    "use strict";
 
     var message = "Yo!";
 
@@ -21,3 +20,4 @@
 }(window.app = window.app || {}));
 
 app.initialize();
+

@@ -1,10 +1,23 @@
 /* global angular */
 
+"use strict";
+
+angular.module('docsSimpleDirective', [])
+    .controller('MyController', ['$scope', function ($scope) {
+        $scope.customer = {
+            name: 'Naomi',
+            address: '1600 Amphitheatre'
+        };
+    }])
+    .directive('myCustomer', function () {
+        return {
+            template: 'Name: {{customer.name}} Address: {{customer.address}}'
+        };
+    });
+
 angular.module("bootstrap", ["ui.bootstrap"]);
 
 var ModalDemoCtrl = function ($scope, $modal, $log) {
-
-    "use strict";
 
     $scope.items = ["item1", "item2", "item3"];
 
@@ -30,7 +43,6 @@ var ModalDemoCtrl = function ($scope, $modal, $log) {
 
 var ModalInstanceCtrl = function ($scope, $modalInstance, items) {
 
-    "use strict";
 
     $scope.items = items;
     $scope.selected = {

@@ -9,7 +9,7 @@
   "indent": 4,
   "newcap": true,
   "noarg": true,
-  "quotmark": "double",
+  //"quotmark": "double",
   "regexp": true,
   "undef": true,
   "strict": true,
