@@ -46,46 +46,17 @@
         </header>
         <div class="container">
             <h1>Yo!</h1>
-            <!--
-            Adding this breaks stuff, don't know why... yet.
-            <div ng-app="docsSimpleDirective">
-                <div ng-controller="MyController">
-                    <div my-customer></div>
-                </div>
-            </div>
-            -->
-            <div ng-app="bootstrap">
-                <div ng-controller="ModalDemoCtrl">
-                    <script type="text/ng-template" id="myModalContent.html">
-                        <div class="modal-header">
-                            <h3>I'm a modal!</h3>
-                        </div>
-                        <div class="modal-body">
-                            <ul>
-                                <li ng-repeat="item in items">
-                                    <a ng-click="selected.item = item">{{ item }}</a>
-                                </li>
-                            </ul>
-                            Selected: <b>{{ selected.item }}</b>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-primary" ng-click="ok()">OK</button>
-                            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                        </div>
-                    </script>
-                    <button class="btn btn-default" ng-click="open()">Open me!</button>
-                    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
-                </div>
-            </div>
-
-
+            <div d3-bars bar-height="20" bar-padding="5"></div>
         </div>
 
         <footer>
             <a href="https://github.com/francescozaia/" target="blank">view on github</a>
         </footer>
 
+        <script src="js/d3/d3-init.js"></script>
+        <script src="js/d3/d3-app.js"></script>
         <script src="js/app/App.js"></script>
         <script src="js/app/Modal.js"></script>
+
     </body>
 </html>

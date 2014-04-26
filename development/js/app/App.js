@@ -1,4 +1,4 @@
-/* global window, app, angular */
+/* global document, window, app, angular */
 "use strict";
 
 (function (_app) {
@@ -10,6 +10,8 @@
     /* private method */
     function init() {
         console.log(message);
+        angular.bootstrap(document, ["d3AngularApp"]);
+
     }
 
     /* public method here used as "constructor" */
