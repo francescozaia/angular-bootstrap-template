@@ -1,4 +1,4 @@
-Angular + D3.js working example
+Angular + D3.js experiment
 =====
 
 Uses Twitter Bootstrap with Angular.js.
